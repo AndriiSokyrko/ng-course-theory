@@ -1,0 +1,6 @@
+<h4 [appBackground]="'grey'" [hoverColor]="'darkblue'"  class="list-group-item-heading">Название :{{car.name}}</h4>
+<p class="list-group-item-text">
+    год выпуска {{car.year}} , цвет авто <span ng-style="{'color': car.color}">  {{car.color}} </span>
+    , состояние {{car.status}}
+</p>
+<ng-content></ng-content>

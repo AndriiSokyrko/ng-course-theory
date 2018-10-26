@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <p>
+            The form for adding cars!
+        </p>
+        <div class="col-lg-6 col-sm-6 col-xs-6">
+            <!--<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>-->
+            <app-add-car (onAddCar)="updateCarLst($event)"></app-add-car>
+            <!--</form>-->
+
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-6">
+
+            <div class="list-group">
+                <app-car class="list-group-item" *ngFor="let car of cars" [carItem]="car">
+                    <button *ngIf="car.sale; else onSaled" (click)="isSold('sold')" class="btn btn-primary">Продать
+                    </button>
+                    <ng-template #onSaled>
+                        <div class="alert alert-info">
+                            <span>Машина продана</span>
+                            <button (click)="isSold('cancel')">Отменить</button>
+                        </div>
+                    </ng-template>
+
+
+                </app-car>
+            </div>
+        </div>
+    </div>
+</div>

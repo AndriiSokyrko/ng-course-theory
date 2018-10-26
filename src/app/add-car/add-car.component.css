@@ -1,0 +1,12 @@
+label{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+label input{
+    width: 100%;
+}
+button{
+    display: block;
+    width: 100%;
+}

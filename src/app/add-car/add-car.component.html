@@ -1,0 +1,5 @@
+<label >Название<input name="" type="text" [(ngModel)]="carName" class="formAddCar"></label>
+<label>Год выпуска<input name="" type="number" [(ngModel)]="carYear"></label>
+<label>Цвет авто<input name="" type="text" #carColor></label>
+<label>Сосостояние<input name="" type="text" #carStatus></label>
+<button class="btn btn-primary" (click)="addCar(carColor)" >Add new Car</button>
